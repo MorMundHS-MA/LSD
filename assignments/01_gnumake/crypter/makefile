@@ -1,24 +1,24 @@
-all : encrypt decrypt runtest
+all : output/encrypt output/decrypt runtest
 clean :
 	rm output/main.o output/crypto.o output/test.o output/encrypt output/decrypt output/test
 
-runtest : test
+runtest : output/test
 	./output/test
 
-main.o : main.c crypto.h
+output/main.o : main.c crypto.h
 	cc -o output/main.o -c main.c
 
-crypto.o : crypto.c crypto.h
+output/crypto.o : crypto.c crypto.h
 	cc -o output/crypto.o -c crypto.c
 
-test.o : test.c crypto.h
+output/test.o : test.c crypto.h
 	cc -o output/test.o -c test.c
 
-encrypt : main.o crypto.o
+output/encrypt : output/main.o output/crypto.o
 	cc -o output/encrypt output/main.o output/crypto.o
 
-decrypt : main.o crypto.o
+output/decrypt : output/main.o output/crypto.o
 	cc -o output/decrypt output/main.o output/crypto.o
 
-test : test.o crypto.o
+output/test : output/test.o output/crypto.o
 	cc -o output/test output/test.o output/crypto.o
