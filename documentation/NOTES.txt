@@ -1,0 +1,5 @@
+The requestProcess UML was found here:
+https://tomcat.apache.org/tomcat-6.0-doc/architecture/requestProcess.html
+
+--> most important functions (except the protocol) are going on here:
+C:\...\apache-tomcat-6.0.53-src\java\org\apache\catalina\core

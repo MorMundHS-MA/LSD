@@ -40,6 +40,7 @@ public class TomcatStarter implements Runnable {
     
     public static void main( String args[] ) {
         System.err.println("TomcatStarter: main()");
+        System.out.println("blablablablabla");
         int nClasses = 0;
         
         try {

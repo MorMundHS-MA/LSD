@@ -394,8 +394,8 @@ public final class Bootstrap {
                 return;
             }
         }
-
-        try {
+        Http11Protoco
+        try {Http11Protoco
             String command = "start";
             if (args.length > 0) {
                 command = args[args.length - 1];
