@@ -1,0 +1,643 @@
+title __CORE's Class Diagram__\n
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationContext {
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class DispatchData {
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationContextFacade {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationDispatcher {
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class PrivilegedForward {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class PrivilegedInclude {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class State {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationFilterChain {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationFilterConfig {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationFilterFactory {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationHttpRequest {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class AttributeNamesEnumerator {
+              # pos : int
+              # last : int
+              # parentEnumeration : Enumeration
+              # next : String
+              + AttributeNamesEnumerator()
+              + hasMoreElements()
+              + nextElement()
+              # findNext()
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationHttpResponse {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationRequest {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ApplicationResponse {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class AprLifecycleListener {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class Constants {
+              {static} + Package : String
+              {static} + MAJOR_VERSION : int
+              {static} + MINOR_VERSION : int
+              {static} + JSP_SERVLET_CLASS : String
+              {static} + JSP_SERVLET_NAME : String
+              {static} + PRECOMPILE : String
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          abstract class ContainerBase {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class PrivilegedAddChild {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class ContainerBackgroundProcessor {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class NoopAccessLog {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class DummyRequest {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class DummyResponse {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class JasperListener {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class JreMemoryLeakPreventionListener {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class NamingContextListener {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardContext {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardContextValve {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardEngine {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class AccessLogListener {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardEngineValve {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardHost {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class MemoryLeakTrackingListener {
+              + lifecycleEvent()
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardHostValve {
+
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardPipeline {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardServer {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardService {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardThreadExecutor {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class TaskQueue {
+
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class TaskThreadFactory {
+
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardWrapper {
+
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardWrapperFacade {
+
+          }
+        }
+      }
+    }
+  }
+
+
+  package  {
+    package org.apache {
+      package org.apache.catalina {
+        package org.apache.catalina.core {
+          class StandardWrapperValve {
+
+          }
+        }
+      }
+    }
+  }
+  
+
+  ApplicationContext -up-|> ServletContext
+  ApplicationContext +-down- DispatchData
+  ApplicationContextFacade -up-|> ServletContext
+  ApplicationDispatcher -up-|> RequestDispatcher
+  ApplicationDispatcher +-down- PrivilegedForward
+  ApplicationDispatcher +-down- PrivilegedInclude
+  ApplicationDispatcher +-down- State
+  PrivilegedForward -up-|> PrivilegedExceptionAction
+  PrivilegedInclude -up-|> PrivilegedExceptionAction
+  ApplicationFilterChain -up-|> FilterChain
+  ApplicationFilterChain -up-|> CometFilterChain
+  ApplicationFilterConfig -up-|> FilterConfig
+  ApplicationFilterConfig -up-|> Serializable
+  ApplicationHttpRequest +-down- AttributeNamesEnumerator
+  AttributeNamesEnumerator -up-|> Enumeration
+  AprLifecycleListener -up-|> LifecycleListener
+  ContainerBase -up-|> Container
+  ContainerBase -up-|> Lifecycle
+  ContainerBase -up-|> Pipeline
+  ContainerBase -up-|> MBeanRegistration
+  ContainerBase -up-|> Serializable
+  ContainerBase +-down- PrivilegedAddChild
+  ContainerBase +-down- ContainerBackgroundProcessor
+  ContainerBase +-down- NoopAccessLog
+  PrivilegedAddChild -up-|> PrivilegedAction
+  ContainerBackgroundProcessor -up-|> Runnable
+  NoopAccessLog -up-|> AccessLog
+  DummyRequest -up-|> HttpServletRequest
+  DummyResponse -up-|> HttpServletResponse
+  JasperListener -up-|> LifecycleListener
+  JreMemoryLeakPreventionListener -up-|> LifecycleListener
+  NamingContextListener -up-|> LifecycleListener
+  NamingContextListener -up-|> ContainerListener
+  NamingContextListener -up-|> PropertyChangeListener
+  StandardContext -up-|> Context
+  StandardContext -up-|> Serializable
+  StandardContext -up-|> NotificationEmitter
+  StandardEngine -up-|> Engine
+  StandardEngine +-down- AccessLogListener
+  AccessLogListener -up-|> PropertyChangeListener
+  AccessLogListener -up-|> LifecycleListener
+  AccessLogListener -up-|> ContainerListener
+  AccessLogListener o-- StandardEngine : engine
+  StandardHost -up-|> Host
+  StandardHost +-down- MemoryLeakTrackingListener
+  MemoryLeakTrackingListener -up-|> LifecycleListener
+  StandardPipeline -up-|> Pipeline
+  StandardPipeline -up-|> Contained
+  StandardPipeline -up-|> Lifecycle
+  StandardServer -up-|> Lifecycle
+  StandardServer -up-|> Server
+  StandardServer -up-|> MBeanRegistration
+  StandardService -up-|> Lifecycle
+  StandardService -up-|> Service
+  StandardService -up-|> MBeanRegistration
+  StandardThreadExecutor -up-|> Executor
+  StandardThreadExecutor +-down- TaskQueue
+  StandardThreadExecutor +-down- TaskThreadFactory
+  TaskThreadFactory -up-|> ThreadFactory
+  StandardWrapper -up-|> ServletConfig
+  StandardWrapper -up-|> Wrapper
+  StandardWrapper -up-|> NotificationEmitter
+  StandardWrapperFacade -up-|> ServletConfig
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

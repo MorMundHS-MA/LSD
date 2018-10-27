@@ -3,3 +3,19 @@ https://tomcat.apache.org/tomcat-6.0-doc/architecture/requestProcess.html
 
 --> most important functions (except the protocol) are going on here:
 C:\...\apache-tomcat-6.0.53-src\java\org\apache\catalina\core
+
+purpose of catalina:
+Catalina is a webcontainer
+
+--> Webcontainer: A web container (also known as a servlet container;[1] and compare "webtainer"[2])
+is the component of a web server that interacts with Java servlets. A web container is responsible
+for managing the lifecycle of servlets, mapping a URL to a particular servlet and ensuring that
+the URL requester has the correct access-rights. [Wikipedia]
+
+Last Visualisation:
+http://www.plantuml.com/plantuml/uml/
+
+Implementations of Servlet in:
+ApplicationResponse.java, ApplicationRequest.java
+(URL) Mapping in:
+C:\[..}\apache-tomcat-6.0.53-src\conf
