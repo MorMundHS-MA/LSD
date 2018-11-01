@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Tomcat" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="org.apache.catalina.startup.Catalina" />
+    <module name="tomcat" />
+    <option name="PROGRAM_PARAMETERS" value="start" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
