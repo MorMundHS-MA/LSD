@@ -68,7 +68,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.apache.catalina.startup.Bootstrap</mainClass>
+                            <mainClass>org.apache.catalina.startup.Catalina</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
