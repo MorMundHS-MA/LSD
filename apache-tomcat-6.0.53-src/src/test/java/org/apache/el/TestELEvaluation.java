@@ -126,43 +126,6 @@ public class TestELEvaluation {
         assertEquals("\\\\", evaluateExpression("\\\\"));
     }
 
-    @Test
-    public void testParserStringLiteral() {
-        // Inspired by work on bug 45451, comments from kkolinko on the dev
-        // list and looking at the spec to find some edge cases
-
-        // The only characters that can be escaped inside a String literal
-        // are \ " and '. # and $ are not escaped inside a String literal.
-        assertEquals("\\", evaluateExpression("${'\\\\'}"));
-        assertEquals("\\", evaluateExpression("${\"\\\\\"}"));
-        assertEquals("\\\"'$#", evaluateExpression("${'\\\\\\\"\\'$#'}"));
-        assertEquals("\\\"'$#", evaluateExpression("${\"\\\\\\\"\\'$#\"}"));
-
-        // Trying to quote # or $ should throw an error
-        Exception e = null;
-        try {
-            evaluateExpression("${'\\$'}");
-        } catch (ELException el) {
-            e = el;
-        }
-        assertNotNull(e);
-
-        assertEquals("\\$", evaluateExpression("${'\\\\$'}"));
-        assertEquals("\\\\$", evaluateExpression("${'\\\\\\\\$'}"));
-
-
-        // Can use ''' inside '"' when quoting with '"' and vice versa without
-        // escaping
-        assertEquals("\\\"", evaluateExpression("${'\\\\\"'}"));
-        assertEquals("\"\\", evaluateExpression("${'\"\\\\'}"));
-        assertEquals("\\'", evaluateExpression("${'\\\\\\''}"));
-        assertEquals("'\\", evaluateExpression("${'\\'\\\\'}"));
-        assertEquals("\\'", evaluateExpression("${\"\\\\'\"}"));
-        assertEquals("'\\", evaluateExpression("${\"'\\\\\"}"));
-        assertEquals("\\\"", evaluateExpression("${\"\\\\\\\"\"}"));
-        assertEquals("\"\\", evaluateExpression("${\"\\\"\\\\\"}"));
-    }
-
     private void compareBoth(String msg, int expected, Object o1, Object o2){
         int i1 = ELSupport.compare(o1, o2);
         int i2 = ELSupport.compare(o2, o1);
@@ -184,21 +147,6 @@ public class TestELEvaluation {
             // Expected
         }
         assertTrue(null == null);
-    }
-
-    /**
-     * Test mixing ${...} and #{...} in the same expression.
-     */
-    @Test
-    public void testMixedTypes() {
-        // Mixing types should throw an error
-        Exception e = null;
-        try {
-            evaluateExpression("${1+1}#{1+1}");
-        } catch (ELException el) {
-            e = el;
-        }
-        assertNotNull(e);
     }
 
     @Test

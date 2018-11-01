@@ -98,28 +98,6 @@ public class TestELSupport {
         }
     }
 
-    @Test
-    public void testCoerceEnumAToEnumB() {
-        Object output = null;
-        try {
-            output = ELSupport.coerceToEnum(TestEnumA.VALA1, TestEnumB.class);
-        } catch (ELException ele) {
-            // Ignore
-        }
-        assertNull(output);
-    }
-
-    @Test
-    public void testCoerceEnumAToEnumC() {
-        Object output = null;
-        try {
-            output = ELSupport.coerceToEnum(TestEnumA.VALA1, TestEnumC.class);
-        } catch (ELException ele) {
-            // Ignore
-        }
-        assertNull(output);
-    }
-
     private static void testIsSame(Object value) {
         assertEquals(value, ELSupport.coerceToNumber(value, value.getClass()));
     }
