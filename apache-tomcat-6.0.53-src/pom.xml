@@ -12,30 +12,48 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-daemon</artifactId>
             <version>1.0.9</version>
-            <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>dbcp</artifactId>
             <version>6.0.53</version>
-            <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.eclipse</groupId>
-            <artifactId>jdt</artifactId>
-            <version>3.3.0-v20070607-1300</version>
-            <type>jar</type>
+            <groupId>org.eclipse.jdt.core.compiler</groupId>
+            <artifactId>ecj</artifactId>
+            <version>4.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.8.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml</groupId>
+            <artifactId>jaxrpc-api</artifactId>
+            <version>1.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+            <version>1.6.2</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
-            <type>jar</type>
             <scope>test</scope>
-            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <properties>
