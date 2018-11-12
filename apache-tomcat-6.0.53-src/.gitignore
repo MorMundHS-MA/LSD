@@ -1,5 +1,5 @@
 # Build binaries 
-/output/
+/target/
 catalina.properties
 
 # IntelliJ User-specific stuff
