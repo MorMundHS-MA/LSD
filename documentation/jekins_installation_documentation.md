@@ -3,13 +3,19 @@
 Im folgenden sind die Schritte die zur Einführung von Jenkins notwendig waren dokumentiert.
 
   - Jenkins auf unserem Server mit Admin-Rechten installieren (In Ibrahims Account): (Stimmen die Befehle?)
+  
     ```sh
-    $ sudo apt update
-    $ sudo apt install jenkins
+    key-hinzufügen:
+    wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+    
+    In sources.list 'deb https://pkg.jenkins.io/debian binary/' hinzufügen.
+    
+    $ sudo apt-get update
+    $ sudo apt-get install jenkins
     ```
 - Jenkins auf unserem server starten (dies geschieht normalerweise automatisch mit jedem Boot)
     ```sh
-    $ lalala
+    $ sudo service jenkins start
     ```
 - Durch den normalen Webbrowser auf die Jenkins seite die lokal auf dem Server läuft zugreifen
     ```sh
@@ -17,7 +23,7 @@ Im folgenden sind die Schritte die zur Einführung von Jenkins notwendig waren d
     http://141.19.142.56:8080
     ```
 - Vorgeschlagene PlugIns installieren
-- Das Adminpasswort (siehe WhatsApp-Chat) aus dem Server in der XXX.fileEnding eingeben
+- Das Adminpasswort (siehe auch im WhatsApp-Chat) findet man im Ordnerverzeichnis:          /var/lib/jenkins/secrets/initialAdminPassword --> nur als root zugreifbar.
 - Dem offiziellen Guide der Jenkins webseite folgen:
 
     ```sh
@@ -25,43 +31,38 @@ Im folgenden sind die Schritte die zur Einführung von Jenkins notwendig waren d
     ```
 - Unter "General" das GitHub Projekt hinzufügen
 - Unter "BuildTriggers" den GitHub Button bestätigen
-- Den Webhook (GOGS) (Auf GIT?) hinzufügen und eventuell das PlugIn installieren (Wo/Wie?). Das notwendige Passwort ist das oben erwähnte Adminpasswort
+- Den Webhook in GOGS hinzufügen. 
+    -   Payload-URL:  http://141.19.142.56:8080/gogs-webhook/?job=tomcat-pipeline
+    -   Secret: Das notwendige Passwort ist das oben erwähnte Adminpasswort
+- GOGS Plugin in Jenkins installieren.
 - Webhook testen
 - Jenkinsfile schreiben und CI-Pipeline testen:
     ```sh
     node {
 
-   stage('Preparation') { // for display purposes
-      // Get some code from a GitHub repository
-      git 'https://git.informatik.hs-mannheim.de/lsd-lecture/team-2.git'
+        stage('Preparation') {
+          git 'https://git.informatik.hs-mannheim.de/lsd-lecture/team-2.git'
+        }
+   
+        stage('Build') {
+          dir('apache-tomcat-6.0.53-src') {
+            sh 'mvn package'
+          }
+        }
+   
+        stage('Test') {
+          dir('apache-tomcat-6.0.53-src') {
+            sh 'mvn test'
+          }
+        }
 
-   }
-   stage('Build') {
-      // Run the maven build
-
-      dir('apache-tomcat-6.0.53-src') {
-          sh 'mvn package'
-      }
-
-   }
-
-   stage('Deploy') {
-            when {
-              expression {
-                currentBuild.result == null || currentBuild.result == 'SUCCESS'
-              }
-            }
-            steps {
-                dir('apache-tomcat-6.0.53-src') {
-                  sh 'java -jar jat-with-dependencies start'
-                }
-            }
+        stage('Deploy') {
+          dir('apache-tomcat-6.0.53-src/target') {
+            sh 'mv tomcat-6.0.53-jar-with-dependencies.jar /var/lib/jenkins/workspace/tomcat-pipeline/apache-tomcat-6.0.53-src'
+          }
         }
     }
     ```
 
-
 # TODO!
 
-  - Unnötige Abhängigkeiten in der pom.xml entfernen und pushen
-  - Test und deploy skript part hinzufügen (mit linux command .jar verschieben?)
