@@ -1,9 +1,9 @@
-# Dokumentation der Jenkins-Integation (LSD)
+﻿# Dokumentation der Jenkins-Integation (LSD)
 
 
 Im folgenden sind die Schritte die zur Einführung von Jenkins notwendig waren dokumentiert.
 
-  - Jenkins auf unserem Server mit Admin-Rechten installieren (In Ibrahims Account): (Stimmen die Befehle?)
+  - Jenkins auf unserem Server mit Admin-Rechten installieren (In Ibrahims Account): 
   
     ```sh
     key-hinzufügen:
