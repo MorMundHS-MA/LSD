@@ -16,7 +16,7 @@
         <module>examples</module>
         <module>host-manager</module>
         <module>manager</module>
-        <module>root</module>
+        <module>ROOT</module>
 
     </modules>
     <build>
