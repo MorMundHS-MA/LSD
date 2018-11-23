@@ -8,6 +8,15 @@
     <packaging>war</packaging>
     <build>
         <finalName>host-manager</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webXml>WEB-INF\web.xml</webXml>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
     <parent>
         <groupId>de.hs_mannheim.lsd.team2</groupId>

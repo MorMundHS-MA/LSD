@@ -5,14 +5,12 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.hs_mannheim.lsd.team2</groupId>
-    <artifactId>tomcat-example</artifactId>
+    <artifactId>example</artifactId>
     <packaging>war</packaging>
     <version>6.0.53</version>
-    <name>tomcat Examples</name>
-    <url>http://maven.apache.org</url>
 
     <build>
-        <finalName>java-web-project</finalName>
+        <finalName>examples</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -21,27 +19,15 @@
                     <webXml>WEB-INF\web.xml</webXml>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-jspc-maven-plugin</artifactId>
-                <version>9.4.7.v20170914</version>
-                <executions>
-                    <execution>
-                        <id>jspc</id>
-                        <goals>
-                            <goal>jspc</goal>
-                        </goals>
-                        <configuration>
-                            <webAppSourceDirectory>${basedir}</webAppSourceDirectory>
-                            <webXml>${basedir}/WEB-INF/web.xml</webXml>
-                            <!-- The comma separated list of patterns for file extensions to be processed. -->
-                            <includes>**/*.jsp</includes>
-                            <jspc><failOnError>true</failOnError></jspc>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.hs_mannheim.lsd.team2</groupId>
+            <artifactId>engine</artifactId>
+            <version>6.0.53</version>
+        </dependency>
+    </dependencies>
 
 </project>
