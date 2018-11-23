@@ -21,6 +21,26 @@
                     <webXml>WEB-INF\web.xml</webXml>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-jspc-maven-plugin</artifactId>
+                <version>9.4.7.v20170914</version>
+                <executions>
+                    <execution>
+                        <id>jspc</id>
+                        <goals>
+                            <goal>jspc</goal>
+                        </goals>
+                        <configuration>
+                            <webAppSourceDirectory>${basedir}</webAppSourceDirectory>
+                            <webXml>${basedir}/WEB-INF/web.xml</webXml>
+                            <!-- The comma separated list of patterns for file extensions to be processed. -->
+                            <includes>**/*.jsp</includes>
+                            <jspc><failOnError>true</failOnError></jspc>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
