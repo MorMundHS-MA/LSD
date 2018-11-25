@@ -13,10 +13,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <configuration>
-                    <webXml>WEB-INF/web.xml</webXml>
-                    <webappDirectory>${basedir}</webappDirectory>
-                </configuration>
                 <version>3.2.2</version>
             </plugin>
         </plugins>
