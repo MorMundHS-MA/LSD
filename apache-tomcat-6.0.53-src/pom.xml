@@ -17,7 +17,6 @@
         <module>host-manager</module>
         <module>manager</module>
         <module>ROOT</module>
-
     </modules>
     <build>
     </build>

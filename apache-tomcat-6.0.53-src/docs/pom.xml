@@ -15,6 +15,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <webXml>WEB-INF/web.xml</webXml>
+                    <webappDirectory>${basedir}</webappDirectory>
                 </configuration>
             </plugin>
         </plugins>
