@@ -17,7 +17,7 @@
 -->
 <!DOCTYPE document [
   <!ENTITY project SYSTEM "project.xml">
-  <!ENTITY defaultpolicy SYSTEM "../../conf/catalina.policy">
+  <!ENTITY defaultpolicy SYSTEM "../resources/conf/catalina.policy">
 ]>
 <document url="security-manager-howto.html">
 
