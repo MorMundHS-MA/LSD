@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ROOT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/docs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/engine" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/examples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/host-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manager" charset="UTF-8" />
+  </component>
+</project>

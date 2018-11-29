@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ROOT/ROOT.iml" filepath="$PROJECT_DIR$/ROOT/ROOT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/docs/docs.iml" filepath="$PROJECT_DIR$/docs/docs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/engine/engine.iml" filepath="$PROJECT_DIR$/engine/engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/example.iml" filepath="$PROJECT_DIR$/examples/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/host-manager/host-manager.iml" filepath="$PROJECT_DIR$/host-manager/host-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manager/manager.iml" filepath="$PROJECT_DIR$/manager/manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcat.iml" filepath="$PROJECT_DIR$/tomcat.iml" />
+    </modules>
+  </component>
+</project>
