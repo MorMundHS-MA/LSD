@@ -22,7 +22,7 @@ node {
   stage('Deploy') {
     dir('apache-tomcat-6.0.53-src') {
       // Export new docker image
-      sh 'docker save tomcat | gzip -c > /var/local/web-root/tomcat-docker-$buildNr.tar.gz'
+      sh 'docker save tomcat | gzip -c > /var/local/web-root/releases/tomcat-docker-$buildNr.tar.gz'
       // Restart demo server
       sh 'docker stop tomcat-demo || true && docker rm tomcat-demo || true'
       sh 'docker run -p 8082:8080 --restart=always -it -d --name tomcat-demo tomcat'
