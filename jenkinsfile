@@ -24,9 +24,8 @@ node {
       // Export new docker image
       sh 'docker save tomcat | gzip -c > /var/local/web-root/tomcat-docker-$buildNr.tar.gz'
       // Restart demo server
-      sh 'docker stop tomcat-demo'
-      sh 'docker rm tomcat-demo'
-      sh 'docker run -p 8082:8080 -it -d --name tomcat-demo tomcat'
+      sh 'docker stop tomcat-demo || true && docker rm tomcat-demo || true'
+      sh 'docker run -p 8082:8080 --restart=always -it -d --name tomcat-demo tomcat'
     }
   }
 }
