@@ -4,18 +4,21 @@ node {
     git 'https://git.informatik.hs-mannheim.de/lsd-lecture/team-2.git'
   }
 
-  stage('Test') {
-    dir('apache-tomcat-6.0.53-src') {
-      sh 'mvn test'
-    }
-  }
-
   stage('Build') {
     // Run the maven and docker builds
     dir('apache-tomcat-6.0.53-src') {
       sh './build.sh'
       sh 'docker build -t tomcat .'
     }
+  }
+
+  stage('Static Analysis') {
+      dir('apache-tomcat-6.0.53-src/engine') {
+          sh 'echo https://i.kym-cdn.com/entries/icons/mobile/000/027/456/kowalski.jpg'
+          sh 'mvn spotbugs:spotbugs'
+          sh 'mvn pmd:pmd'
+          recordIssues(tools: [pmd(), spotBugs(useRankAsPriority: true)])
+      }
   }
 
   env.buildNr = BUILD_NUMBER
