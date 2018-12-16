@@ -1507,7 +1507,7 @@ public class Response
                 AccessController.doPrivileged(new PrivilegedAction() {
 
                 public Object run(){
-                    return new Boolean(doIsEncodeable(hreq, session, location));
+                    return Boolean.valueOf(doIsEncodeable(hreq, session, location));
                 }
             })).booleanValue();
         } else {
