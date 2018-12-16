@@ -4,6 +4,10 @@ node {
     git 'https://git.informatik.hs-mannheim.de/lsd-lecture/team-2.git'
   }
 
+  stage('Trigger other build(s)') {
+    build job: 'chat-service', wait: false
+  }
+
   stage('Build') {
     // Run the maven and docker builds
     dir('apache-tomcat-6.0.53-src') {

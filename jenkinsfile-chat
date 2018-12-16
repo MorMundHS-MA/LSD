@@ -2,6 +2,8 @@ node {
   stage('Preparation') { // for display purposes
     // Get code from a GitHub repository
     git 'https://git.informatik.hs-mannheim.de/lsd-lecture/team-2.git'
+    sh 'rm -r -f int-chat'
+    sh 'git submodule update --init --recursive'
   }
 
   stage('Build') {
