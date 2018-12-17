@@ -9,7 +9,7 @@ node {
   stage('Build') {
     // Run the maven builds
     dir('int-chat/services') {
-      sh 'mvn clean package'
+      sh 'mvn clean package install'
     }
   }
 
