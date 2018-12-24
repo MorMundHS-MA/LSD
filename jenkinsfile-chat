@@ -14,7 +14,7 @@ node {
   }
 
   stage('Static Analysis') {
-      dir('int-chat/services/login-server') {
+      dir('int-chat/services/chat-server') {
           sh 'echo https://i.kym-cdn.com/entries/icons/mobile/000/027/456/kowalski.jpg'
           sh 'mvn spotbugs:spotbugs'
           sh 'mvn pmd:pmd'
