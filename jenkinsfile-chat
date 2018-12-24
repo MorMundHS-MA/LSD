@@ -9,15 +9,14 @@ node {
   stage('Build') {
     // Run the maven builds
     dir('int-chat/services') {
-      sh 'mvn clean package install'
+      sh 'mvn -B clean package install'
     }
   }
 
   stage('Static Analysis') {
       dir('int-chat/services/chat-server') {
           sh 'echo https://i.kym-cdn.com/entries/icons/mobile/000/027/456/kowalski.jpg'
-          sh 'mvn spotbugs:spotbugs'
-          sh 'mvn pmd:pmd'
+          sh 'mvn -B spotbugs:spotbugs pmd:pmd'
           findbugs pattern: '**/spotbugsXml.xml'
           pmd()
           jacoco()
